@@ -9,10 +9,12 @@ rhdf5::h5disableFileLocking()
 path = system.file(package="liftOver", "extdata", "hg38ToHg19.over.chain")
 ch = import.chain(path)
 
-workingDir_blueprint <-
-  "/users/shicks1/projects/methylCCPaper/case-studies/blueprint-wgbs"
-dataPath <- "/users/shicks1/data/DNAm/blueprint_ihec"
-scratchPath <- "/fastscratch/myscratch/shicks1"
+workingDir_blueprint <- "/share/lasallelab/Ben/FlowSorted.Blood.WGBS.BLUEPRINT/working"
+dataPath <- "/share/lasallelab/Ben/FlowSorted.Blood.WGBS.BLUEPRINT/data"
+scratchPath <- "/share/lasallelab/Ben/FlowSorted.Blood.WGBS.BLUEPRINT/scratch"
+
+dir.create(workingDir_blueprint)
+dir.create(scratchPath)
 
 custom_table <- readRDS(file = file.path(dataPath,"blueprint_blood_custom_table.RDS"))
 custom_table$file_name <- unlist(lapply(stringr::str_split(custom_table$file_path, "CNAG/"),

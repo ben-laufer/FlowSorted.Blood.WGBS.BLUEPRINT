@@ -4,7 +4,8 @@ library(foreach)
 library(data.table)
 library(readr)
 
-dataPath <- "/users/shicks1/data/DNAm/blueprint_ihec"
+dataPath <- "/share/lasallelab/Ben/FlowSorted.Blood.WGBS.BLUEPRINT/data"
+dir.create(dataPath)
 
 # Test installation and connectivity by saying hello to the DeepBlue server:
 deepblue_info("me")

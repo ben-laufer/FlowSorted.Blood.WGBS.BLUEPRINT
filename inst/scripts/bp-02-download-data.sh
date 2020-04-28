@@ -5,7 +5,7 @@ mkdir files_bigwig
 mkdir files_bsseq
 
 cd files_bigwig
-cat /users/shicks1/data/DNAm/blueprint_ihec/blueprint_blood_ftp_paths.csv | while read line
+cat /share/lasallelab/Ben/FlowSorted.Blood.WGBS.BLUEPRINT/data/blueprint_blood_ftp_paths.csv | while read line
 do
 wget $line
 done
